@@ -1,4 +1,6 @@
-# strip-pragma-loader
+# strip-pragma-loader-fork
+
+(this fork fixes the webpack dependency)
 
 A [webpack](http://webpack.github.io/) loader that strips code block from between requireJS `includeStart`/`excludeStart` pragma style comments using the [requireJS optimizer syntax](https://github.com/requirejs/r.js/blob/master/build/example.build.js?utm_campaign=improving-frontend-web-performance-using-requirejs-optimiser-2013-jun&utm_medium=post&utm_source=blog#L260).
 
@@ -15,12 +17,12 @@ console.log('Debugging...');
 Install the loader with npm.
 
 ```
-npm install strip-pragma-loader --save-dev
+npm install strip-pragma-loader-fork --save-dev
 ```
 
 ## Usage
 
-In your webpack configuration object, you'll need to add `strip-pragma-loader` to your list of modules.
+In your webpack configuration object, you'll need to add `strip-pragma-loader-fork` to your list of modules.
 
 ```
 module: {
@@ -55,7 +57,7 @@ module: {
 		test: /\.js$/,
 		enforce: pre,
 		use: [{
-			loader: 'strip-pragma-loader',
+			loader: 'strip-pragma-loader-fork',
 			options: {
 				pragmas: {
 					debug: true
